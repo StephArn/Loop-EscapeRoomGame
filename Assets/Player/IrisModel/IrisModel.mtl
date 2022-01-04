@@ -1,0 +1,62 @@
+# Exported from Fuse 1.3.0
+
+newmtl Shoes
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd IrisModel_Shoes_diffuse.png
+map_Ks IrisModel_Shoes_specular.png
+bump IrisModel_Shoes_normal.png
+map_Ns IrisModel_Shoes_gloss.png
+
+newmtl Top
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd IrisModel_Top_diffuse.png
+map_Ks IrisModel_Top_specular.png
+bump IrisModel_Top_normal.png
+map_Ns IrisModel_Top_gloss.png
+
+newmtl Bottom
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd IrisModel_Bottom_diffuse.png
+map_Ks IrisModel_Bottom_specular.png
+bump IrisModel_Bottom_normal.png
+map_Ns IrisModel_Bottom_gloss.png
+
+newmtl Hair
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd IrisModel_Hair_diffuse.png
+map_Ks IrisModel_Hair_specular.png
+bump IrisModel_Hair_normal.png
+map_Ns IrisModel_Hair_gloss.png
+
+newmtl Body
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd IrisModel_Body_diffuse.png
+map_Ks IrisModel_Body_specular.png
+bump IrisModel_Body_normal.png
+map_Ns IrisModel_Body_gloss.png
+
