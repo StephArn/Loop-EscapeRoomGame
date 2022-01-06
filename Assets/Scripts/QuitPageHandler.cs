@@ -13,6 +13,7 @@ public class QuitPageHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        yesBtn.onClick.AddListener(Exit);
         noBtn.onClick.AddListener(loadMainMenu);
     }
 
@@ -20,6 +21,12 @@ public class QuitPageHandler : MonoBehaviour
     {
         frame1.SetActive(true);
         frame2.SetActive(false);
+    }
+
+    void Exit()
+    {
+        Application.Quit();
+        Debug.Log("Has quit game");
     }
 
     // Update is called once per frame

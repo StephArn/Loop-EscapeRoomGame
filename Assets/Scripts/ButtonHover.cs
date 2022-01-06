@@ -1,27 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ButtonHover : MonoBehaviour
 {
 
+    public Text theText;
     public Button button;
 
-    public void HandleMouseEnter()
+    public void ChangeColorEnter()
     {
-        
+        theText.color = Color.white;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void ChangeColorExit()
     {
-        
+        theText.color = Color.black;
     }
 
-    // Update is called once per frame
-    void Update()
+/*    public void ChangeSizeEnter()
     {
-        
+        button.image.rectTransform.sizeDelta = new Vector2(260f, 45f);
     }
+
+    public void ChangeSizeExit()
+    {
+        button.image.rectTransform.sizeDelta = new Vector2(250f, 40f);
+
+    }
+*/
 }

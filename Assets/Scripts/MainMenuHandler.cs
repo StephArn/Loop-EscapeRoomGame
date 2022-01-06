@@ -11,6 +11,7 @@ public class MainMenuHandler : MonoBehaviour
     public Button optionsBtn;
     public Button quitBtn;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class MainMenuHandler : MonoBehaviour
         frame2.SetActive(true);
         frame1.SetActive(false);
     }
+
 
     // Update is called once per frame
     void Update()
