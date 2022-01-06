@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ChangeMenuFrame : MonoBehaviour
 {
-    public GameObject camera0;
-    public GameObject camera1;
     public GameObject frame0;
     public GameObject frame1;
     // Start is called before the first frame update
@@ -21,8 +19,6 @@ public class ChangeMenuFrame : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            camera1.SetActive(true);
-            camera0.SetActive(false);
             frame1.SetActive(true);
             frame0.SetActive(false);
         }
