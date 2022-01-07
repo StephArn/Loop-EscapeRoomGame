@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionPageHandler : MonoBehaviour
+public class CreditsPageHandler : MonoBehaviour
 {
     public Button backBtn;
-    public GameObject optionsPage;
+    public GameObject creditsPage;
     public GameObject mainMenu;
     // Start is called before the first frame update
     void Start()
     {
-        backBtn.onClick.AddListener(closeOptionsPage);
+        backBtn.onClick.AddListener(closeCreditsPage);
     }
 
-    void closeOptionsPage()
+    void closeCreditsPage()
     {
         mainMenu.SetActive(true);
-        optionsPage.SetActive(false);
+        creditsPage.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

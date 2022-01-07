@@ -9,26 +9,35 @@ public class ButtonHover : MonoBehaviour
 
     public Text theText;
     public Button button;
+    public int initialFontSize;
 
-    public void ChangeColorEnter()
+    public void ChangeSizeEnter()
     {
-        theText.color = Color.white;
-    }
-
-    public void ChangeColorExit()
-    {
-        theText.color = Color.black;
-    }
-
-/*    public void ChangeSizeEnter()
-    {
-        button.image.rectTransform.sizeDelta = new Vector2(260f, 45f);
+        theText.fontSize = initialFontSize + 3;
     }
 
     public void ChangeSizeExit()
     {
-        button.image.rectTransform.sizeDelta = new Vector2(250f, 40f);
+        theText.fontSize = initialFontSize;
 
     }
-*/
+
+    void Start()
+    {
+        initialFontSize = theText.fontSize;
+    }
+
+    /*
+        public void ChangeColorEnter()
+        {
+            theText.color = Color.white;
+        }
+
+        public void ChangeColorExit()
+        {
+            theText.color = Color.black;
+        }   
+    */
+
+
 }
