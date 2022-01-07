@@ -23,6 +23,7 @@ public class MainMenuHandler : MonoBehaviour
     void loadOptionsPage()
     {
         optionsPage.SetActive(true);
+        frame1.SetActive(false);
     }
 
     void loadQuitPage()

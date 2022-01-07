@@ -7,6 +7,7 @@ public class OptionPageHandler : MonoBehaviour
 {
     public Button backBtn;
     public GameObject optionsPage;
+    public GameObject mainMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class OptionPageHandler : MonoBehaviour
 
     void closeOptionsPage()
     {
+        mainMenu.SetActive(true);
         optionsPage.SetActive(false);
     }
 
