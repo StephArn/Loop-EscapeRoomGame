@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class MainMenuHandler : MonoBehaviour
 {
     public GameObject optionsPage;
+    public GameObject creditsPage;
     public GameObject frame1;
     public GameObject frame2;
     public Button optionsBtn;
+    public Button creditsBtn;
     public Button quitBtn;
 
 
@@ -16,6 +18,7 @@ public class MainMenuHandler : MonoBehaviour
     void Start()
     {
         optionsBtn.onClick.AddListener(loadOptionsPage);
+        creditsBtn.onClick.AddListener(loadCreditsPage);
         quitBtn.onClick.AddListener(loadQuitPage);
 
     }
@@ -23,6 +26,12 @@ public class MainMenuHandler : MonoBehaviour
     void loadOptionsPage()
     {
         optionsPage.SetActive(true);
+        frame1.SetActive(false);
+    }
+
+    void loadCreditsPage()
+    {
+        creditsPage.SetActive(true);
         frame1.SetActive(false);
     }
 
