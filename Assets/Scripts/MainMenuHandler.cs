@@ -35,12 +35,6 @@ public class MainMenuHandler : MonoBehaviour
         frame1.SetActive(false);
     }
 
-    void loadCreditsPage()
-    {
-        creditsPage.SetActive(true);
-        frame1.SetActive(false);
-    }
-
     void loadQuitPage()
     {
         frame2.SetActive(true);
