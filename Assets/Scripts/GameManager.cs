@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject frame2;
     public GameObject optionsPage;
     public GameObject creditsPage;
+    public GameObject playerCamera;
 
 
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
         frame2.SetActive(false);
         optionsPage.SetActive(false);
         creditsPage.SetActive(false);
+        playerCamera.SetActive(false);
     }
 
     // Update is called once per frame
