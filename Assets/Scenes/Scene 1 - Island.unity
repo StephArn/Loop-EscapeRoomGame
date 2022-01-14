@@ -5652,13 +5652,14 @@ GameObject:
   - component: {fileID: 1066878212}
   - component: {fileID: 1066878211}
   - component: {fileID: 1066878215}
+  - component: {fileID: 1066878216}
   m_Layer: 5
   m_Name: Frame1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1066878211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5764,6 +5765,25 @@ MonoBehaviour:
   optionsBtn: {fileID: 319394183}
   creditsBtn: {fileID: 993635524}
   quitBtn: {fileID: 1364182588}
+--- !u!95 &1066878216
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066878210}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5af61cd04a6cadb45978983d759993e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1091721358
 GameObject:
   m_ObjectHideFlags: 0
@@ -7817,7 +7837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1456249857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16530,8 +16550,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121255496}
-  m_LocalRotation: {x: -0.023436688, y: -0.8425888, z: -0.036788233, w: 0.5367882}
-  m_LocalPosition: {x: 6575.5, y: 85, z: 600}
+  m_LocalRotation: {x: -0.0029212127, y: -0.99680537, z: -0.04352148, w: 0.06690674}
+  m_LocalPosition: {x: 2537.5, y: 267, z: 1570.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

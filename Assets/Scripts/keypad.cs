@@ -15,14 +15,9 @@ using UnityEngine.SceneManagement;
 
 public class keypad : MonoBehaviour
 {
-    // *** CAN DELETE THESE ** \\
-    // Used to hide joystick and slider
-    [Header("Objects to Hide/Show")]
-    public GameObject objectToDisable;
-    public GameObject objectToDisable2;
 
     // Object to be enabled is the keypad. This is needed
-    public GameObject objectToEnable;
+    public GameObject keycode1;
 
     // *** Breakdown of header(public) variables *** \\
     // curPassword : Pasword to set. Ive set the password in the project. Note it can be any length and letters or numbers or sysmbols
@@ -31,7 +26,7 @@ public class keypad : MonoBehaviour
     // audioData : Play this sound when user enters in password incorrectly too many times
 
     [Header("Keypad Settings")]
-    public string curPassword = "28112017";
+    public string curPassword = "1234";
     public string input;
     public Text displayText;
     public AudioSource audioData;
@@ -100,15 +95,18 @@ public class keypad : MonoBehaviour
                     }
                 }
 
+                if (selection.CompareTag("numberBtn")) // Tag on the gameobject - Note the gameobject also needs a box collider
+                {
+                    Debug.Log("number pressed");
+                }
+
             }
         }
 
         // Disable sections when keypadScreen is set to true
         if (keypadScreen)
         {
-            objectToDisable.SetActive(false);
-            objectToDisable2.SetActive(false);
-            objectToEnable.SetActive(true);
+            keycode1.SetActive(true);
         }
 
     }
@@ -118,9 +116,7 @@ public class keypad : MonoBehaviour
         switch (valueEntered)
         {
             case "Q": // QUIT
-                objectToDisable.SetActive(true);
-                objectToDisable2.SetActive(true);
-                objectToEnable.SetActive(false);
+                keycode1.SetActive(false);
                 btnClicked = 0;
                 keypadScreen = false;
                 input = "";
