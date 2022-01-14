@@ -19,6 +19,14 @@ public class keypad : MonoBehaviour
     // Object to be enabled is the keypad. This is needed
     public GameObject keycode1;
 
+    public Button button1;
+    public Button button2;
+    public Button button3;
+    public Button button4;
+    public Button button5;
+    public Button button6;
+    
+
     // *** Breakdown of header(public) variables *** \\
     // curPassword : Pasword to set. Ive set the password in the project. Note it can be any length and letters or numbers or sysmbols
     // input: What is currently entered
@@ -39,8 +47,19 @@ public class keypad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        button1.onClick.AddListener(changeText);
+        button2.onClick.AddListener(changeText);
+        button3.onClick.AddListener(changeText);
         btnClicked = 0; // No of times the button was clicked
         numOfGuesses = curPassword.Length; // Set the password length.
+    }
+
+    void changeText()
+    {
+        string nr = button1.GetComponentInChildren<Text>().text;
+        // Debug.Log(nr);
+        // input += nr; //displayText.text = displayText.text + nr;
+        ValueEntered(nr);
     }
 
     // Update is called once per frame
@@ -56,6 +75,7 @@ public class keypad : MonoBehaviour
                 // LOG message that password is correct
                 Debug.Log("Correct Password!");
                 input = ""; //Clear Password
+                // deschidem cutia
                 btnClicked = 0;
 
             }
@@ -67,9 +87,7 @@ public class keypad : MonoBehaviour
                 audioData.Play();
                 btnClicked = 0;
             }
-
         }
-
     }
 
     void OnGUI()
@@ -98,8 +116,8 @@ public class keypad : MonoBehaviour
                 if (selection.CompareTag("numberBtn")) // Tag on the gameobject - Note the gameobject also needs a box collider
                 {
                     Debug.Log("number pressed");
+                    // ValueEntered("1");
                 }
-
             }
         }
 
@@ -135,7 +153,5 @@ public class keypad : MonoBehaviour
                 displayText.text = input.ToString();
                 break;
         }
-
-
     }
 }
