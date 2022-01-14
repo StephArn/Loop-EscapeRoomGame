@@ -1,13 +1,4 @@
-﻿//333333333333333333333333333333333333333333333333333333333333333333\\
-//
-//          Arthur: Cato Parnell
-//          Description of script: control keypad button clicks and actions
-//          Any queries please go to Youtube: Cato Parnell and ask on video. 
-//          Thanks.
-//
-//33333333333333333333333333333333333333333333333333333333333333333\\
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
@@ -18,14 +9,6 @@ public class keypad : MonoBehaviour
 
     // Object to be enabled is the keypad. This is needed
     public GameObject keycode1;
-
-    public Button button1;
-    public Button button2;
-    public Button button3;
-    public Button button4;
-    public Button button5;
-    public Button button6;
-    
 
     // *** Breakdown of header(public) variables *** \\
     // curPassword : Pasword to set. Ive set the password in the project. Note it can be any length and letters or numbers or sysmbols
@@ -47,20 +30,12 @@ public class keypad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button1.onClick.AddListener(changeText);
-        button2.onClick.AddListener(changeText);
-        button3.onClick.AddListener(changeText);
         btnClicked = 0; // No of times the button was clicked
         numOfGuesses = curPassword.Length; // Set the password length.
-    }
 
-    void changeText()
-    {
-        string nr = button1.GetComponentInChildren<Text>().text;
-        // Debug.Log(nr);
-        // input += nr; //displayText.text = displayText.text + nr;
-        ValueEntered(nr);
+        buttonPress.ButtonPressed += ValueEntered;
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -81,11 +56,12 @@ public class keypad : MonoBehaviour
             }
             else
             {
-                //Reset input varible
-                input = "";
-                displayText.text = input.ToString();
-                audioData.Play();
                 btnClicked = 0;
+                //Reset input varible
+                Debug.Log("Incorrect Password!");
+                input = "";
+                //displayText.text = input.ToString();
+                //audioData.Play();
             }
         }
     }
@@ -138,19 +114,20 @@ public class keypad : MonoBehaviour
                 btnClicked = 0;
                 keypadScreen = false;
                 input = "";
-                displayText.text = input.ToString();
+                //displayText.text = input.ToString();
                 break;
 
             case "C": //CLEAR
                 input = "";
                 btnClicked = 0;// Clear Guess Count
-                displayText.text = input.ToString();
+                //displayText.text = input.ToString();
                 break;
 
             default: // Buton clicked add a variable
                 btnClicked++; // Add a guess
                 input += valueEntered;
-                displayText.text = input.ToString();
+
+                //displayText.text = input.ToString();
                 break;
         }
     }
