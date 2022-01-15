@@ -24,6 +24,7 @@ public class CountObjects : MonoBehaviour
             //Application.LoadLevel(nextLevel);
             //Destroy(objToDestroy);
             objUI.GetComponent<Text>().text = "All done!";
+			// sunet portal
 			light.SetActive(true);
 			portal.SetActive(true);
         }

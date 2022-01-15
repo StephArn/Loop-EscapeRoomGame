@@ -21,7 +21,7 @@ public class keypad : MonoBehaviour
     public string curPassword = "1234";
     public string input;
     public Text displayText;
-    public AudioSource audioData;
+    // public AudioSource audioData;
 
     //Local private variables
     private bool keypadScreen;

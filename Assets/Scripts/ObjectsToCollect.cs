@@ -16,6 +16,10 @@ public class ObjectsToCollect : MonoBehaviour
     {
         if (plyr.gameObject.tag == "Player")
             objects--;
+		
+		//AudioSource audio = gameObject.addComponent<AudioSource >();
+		//audio.PlayOneShot((AudioClip)Assets.Load("shock.mp3"));
+
         gameObject.SetActive(false);
     }
 }
