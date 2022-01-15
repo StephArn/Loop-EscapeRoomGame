@@ -15,10 +15,9 @@ public class keypad : MonoBehaviour
     // input: What is currently entered
     // displayText : Text area on keypad the password entered gets displayed too.
     // audioData : Play this sound when user enters in password incorrectly too many times
-    
-    
+
+    [SerializeField] private Animator ani;
     [Header("Keypad Settings")]
-    public Animator animator;
     public string curPassword = "1234";
     public string input;
     public Text displayText;
@@ -34,10 +33,8 @@ public class keypad : MonoBehaviour
     {
         btnClicked = 0; // No of times the button was clicked
         numOfGuesses = curPassword.Length; // Set the password length.
-        // animator = GetComponent<Animator>();
         buttonPress.ButtonPressed += ValueEntered;
     }
-    
 
     // Update is called once per frame
     void Update()
@@ -53,9 +50,8 @@ public class keypad : MonoBehaviour
                 Debug.Log("Correct Password!");
                 input = ""; //Clear Password
                 btnClicked = 0;
-                
-                // we show the buttons
-                // animator.SetTrigger("CorrectPassword");
+                // we open the door
+                ani.SetBool("CorrectPassword", true);
             }
             else
             {
@@ -100,6 +96,14 @@ public class keypad : MonoBehaviour
         }
     }
 
+    // private void OnTriggerEnter()
+    // {
+    //     if (input == curPassword)
+    //     {
+    //         ani.SetBool("CorrectPassword", true);
+    //     }
+    // }
+
     void OnGUI()
     {
         // Action for clicking keypad( GameObject ) on screen
@@ -136,6 +140,5 @@ public class keypad : MonoBehaviour
         {
             keycode1.SetActive(true);
         }
-
     }
 }
