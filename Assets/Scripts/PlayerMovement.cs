@@ -21,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+
             if (!showMenu)
             {
                 backToMenu.SetActive(true);
@@ -41,13 +43,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        if (Input.GetButton("Fire3"))  
+        if (Input.GetButton("Fire3"))
         {
             speed = 40f;
         }
@@ -61,6 +63,15 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
+
+        if (move.z + transform.position.z <= 1450 || move.x + transform.position.x >= 1750 
+            || move.z + transform.position.z >= 2120 || move.x + transform.position.x <= 600
+            || (move.z + transform.position.z <= 1765 && move.x + transform.position.x <= 1600
+                 && move.y + transform.position.y <=100)
+            )
+        {
+            return;
+        }
 
         controller.Move(move * speed * Time.deltaTime);
 
