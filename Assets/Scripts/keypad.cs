@@ -9,14 +9,16 @@ public class keypad : MonoBehaviour
 
     // Object to be enabled is the keypad. This is needed
     public GameObject keycode1;
-
+    
     // *** Breakdown of header(public) variables *** \\
     // curPassword : Pasword to set. Ive set the password in the project. Note it can be any length and letters or numbers or sysmbols
     // input: What is currently entered
     // displayText : Text area on keypad the password entered gets displayed too.
     // audioData : Play this sound when user enters in password incorrectly too many times
-
+    
+    
     [Header("Keypad Settings")]
+    public Animator animator;
     public string curPassword = "1234";
     public string input;
     public Text displayText;
@@ -32,7 +34,7 @@ public class keypad : MonoBehaviour
     {
         btnClicked = 0; // No of times the button was clicked
         numOfGuesses = curPassword.Length; // Set the password length.
-
+        animator = GetComponent<Animator>();
         buttonPress.ButtonPressed += ValueEntered;
     }
     
@@ -50,9 +52,10 @@ public class keypad : MonoBehaviour
                 // LOG message that password is correct
                 Debug.Log("Correct Password!");
                 input = ""; //Clear Password
-                // deschidem cutia
                 btnClicked = 0;
-
+                
+                // we show the buttons
+                animator.SetTrigger("CorrectPassword");
             }
             else
             {
@@ -63,6 +66,37 @@ public class keypad : MonoBehaviour
                 //displayText.text = input.ToString();
                 //audioData.Play();
             }
+        }
+    }
+    
+    public void ValueEntered(string valueEntered)
+    {
+        switch (valueEntered)
+        {
+            case "Q": // QUIT
+                keycode1.SetActive(false);
+                btnClicked = 0;
+                keypadScreen = false;
+                input = "";
+                displayText.text = input.ToString();
+                break;
+
+            case "C": //CLEAR
+                input = "";
+                btnClicked = 0;// Clear Guess Count
+                displayText.text = input.ToString();
+                break;
+
+            default: // Buton clicked add a variable
+                btnClicked++; // Add a guess
+                // if (btnClicked == numOfGuesses)
+                // {
+                //     btnClicked = 0;
+                //     input = "";
+                // }
+                input += valueEntered;
+                displayText.text = input.ToString();
+                break;
         }
     }
 
@@ -103,32 +137,5 @@ public class keypad : MonoBehaviour
             keycode1.SetActive(true);
         }
 
-    }
-
-    public void ValueEntered(string valueEntered)
-    {
-        switch (valueEntered)
-        {
-            case "Q": // QUIT
-                keycode1.SetActive(false);
-                btnClicked = 0;
-                keypadScreen = false;
-                input = "";
-                //displayText.text = input.ToString();
-                break;
-
-            case "C": //CLEAR
-                input = "";
-                btnClicked = 0;// Clear Guess Count
-                //displayText.text = input.ToString();
-                break;
-
-            default: // Buton clicked add a variable
-                btnClicked++; // Add a guess
-                input += valueEntered;
-
-                //displayText.text = input.ToString();
-                break;
-        }
     }
 }
