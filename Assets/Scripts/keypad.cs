@@ -34,7 +34,7 @@ public class keypad : MonoBehaviour
     {
         btnClicked = 0; // No of times the button was clicked
         numOfGuesses = curPassword.Length; // Set the password length.
-        animator = GetComponent<Animator>();
+        // animator = GetComponent<Animator>();
         buttonPress.ButtonPressed += ValueEntered;
     }
     
@@ -55,7 +55,7 @@ public class keypad : MonoBehaviour
                 btnClicked = 0;
                 
                 // we show the buttons
-                animator.SetTrigger("CorrectPassword");
+                // animator.SetTrigger("CorrectPassword");
             }
             else
             {
