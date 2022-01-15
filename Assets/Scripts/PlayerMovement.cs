@@ -64,14 +64,11 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        if (move.z + transform.position.z <= 1450 || move.x + transform.position.x >= 1750 
-            || move.z + transform.position.z >= 2120 || move.x + transform.position.x <= 600
-            || (move.z + transform.position.z <= 1765 && move.x + transform.position.x <= 1600
-                 && move.y + transform.position.y <=100)
-            )
-        {
-            return;
-        }
+        // if (move.z + transform.position.z <= 1450 || move.x + transform.position.x >= 1750 
+        //     || move.z + transform.position.z >= 2120 || move.x + transform.position.x <= 600)
+        // {
+        //     return;
+        // }
 
         controller.Move(move * speed * Time.deltaTime);
 

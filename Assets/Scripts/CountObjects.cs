@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class CountObjects : MonoBehaviour 
 {
     public string nextLevel;
+	public GameObject light;
+	public GameObject portal;
     public GameObject objToDestroy;
     GameObject objUI;
 	// Use this for initialization
@@ -21,7 +23,10 @@ public class CountObjects : MonoBehaviour
         {
             //Application.LoadLevel(nextLevel);
             //Destroy(objToDestroy);
-            objUI.GetComponent<Text>().text = "All objects collected.";
+            objUI.GetComponent<Text>().text = "All done!";
+			// sunet portal
+			light.SetActive(true);
+			portal.SetActive(true);
         }
 	}
 }
