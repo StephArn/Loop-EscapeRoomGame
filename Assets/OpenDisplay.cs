@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OpenDisplay : MonoBehaviour
 {
@@ -54,6 +55,7 @@ public class OpenDisplay : MonoBehaviour
         {
             changeTextColor.GetComponent<Text>().color = new Color(0f, 1f, 0f, 1f);
             print("Passed!");
+            SceneManager.LoadScene(0);
         }
         else
         {
