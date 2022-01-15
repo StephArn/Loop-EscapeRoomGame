@@ -21,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+
             if (!showMenu)
             {
                 backToMenu.SetActive(true);
@@ -61,6 +63,11 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
+
+        if (move.z + transform.position.z <= 1450 || move.x + transform.position.x >= 1750 || move.z + transform.position.z >= 2120 || move.x + transform.position.x <= 600)
+        {
+            return;
+        }
 
         controller.Move(move * speed * Time.deltaTime);
 
