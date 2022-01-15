@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class ObjectsToCollect : MonoBehaviour 
 {
-    public static int objects = 0;
+    public static int objects = 3;
 	// Use this for initialization
 	void Awake () 
 	{
-        objects++;
 	}
 	
 	// Update is called once per frame

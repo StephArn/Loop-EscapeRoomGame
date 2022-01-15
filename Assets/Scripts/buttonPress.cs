@@ -8,11 +8,19 @@ public class buttonPress : MonoBehaviour
 {
     public static event Action<string> ButtonPressed = delegate { };
 
-    public void PlaybtnClicked()
+    private string buttonName, buttonValue;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        Debug.Log("DA");
-        Camera.main.enabled = false;
-        this.GetComponentsInChildren<Camera>()[0].enabled = true;
+        buttonName = gameObject.name;
+        buttonValue = buttonName.Substring(7);
+        gameObject.GetComponent<Button>().onClick.AddListener(changeText);
+    }
+
+    void changeText()
+    {
+        ButtonPressed(buttonValue);
     }
 
 }
