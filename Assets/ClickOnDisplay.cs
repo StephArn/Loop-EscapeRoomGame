@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ClickOnDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void onClick()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Camera.main.enabled = false;
+        this.GetComponentsInChildren<Camera>()[0].enabled = true;
     }
 }

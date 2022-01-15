@@ -961,14 +961,14 @@ GameObject:
   - component: {fileID: 122374319}
   - component: {fileID: 122374318}
   - component: {fileID: 122374317}
-  - component: {fileID: 122374321}
+  - component: {fileID: 122374320}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: keypad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &122374316
 Transform:
   m_ObjectHideFlags: 0
@@ -1046,7 +1046,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122374315}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &122374321
+--- !u!114 &122374320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1055,9 +1055,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 122374315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d175fa424b38f7843ae5039d8bc43b2d, type: 3}
+  m_Script: {fileID: 11500000, guid: cb323375d22260743923bd33c8cfbf33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keycode1: {fileID: 0}
+  canvas: {fileID: 943193088}
+  passwordCamera: {fileID: 918043724}
+  input: {fileID: 1603824242}
+  changeTextColor: {fileID: 780190097}
 --- !u!1 &148298339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,7 +2735,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd55f3154e6eb844394ea9b2942ca3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  password: {fileID: 780190099}
   input: {fileID: 1603824242}
 --- !u!114 &374279059
 MonoBehaviour:
@@ -6096,7 +6100,7 @@ Transform:
   m_GameObject: {fileID: 814111951}
   m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
   m_LocalPosition: {x: -1.001611, y: -0.720248, z: 0.2}
-  m_LocalScale: {x: 2.0406249, y: 7.400997, z: 44.88124}
+  m_LocalScale: {x: 2.1806118, y: 7.400997, z: 44.88124}
   m_Children: []
   m_Father: {fileID: 773543445}
   m_RootOrder: 3
@@ -7421,7 +7425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &943193089
 RectTransform:
   m_ObjectHideFlags: 0
