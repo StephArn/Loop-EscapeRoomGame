@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class keypad : MonoBehaviour
 {
-
     // Object to be enabled is the keypad. This is needed
     public GameObject keycode1;
+    public GameObject ObjectNum;
     
     // *** Breakdown of header(public) variables *** \\
     // curPassword : Pasword to set. Ive set the password in the project. Note it can be any length and letters or numbers or sysmbols
@@ -50,8 +50,12 @@ public class keypad : MonoBehaviour
                 Debug.Log("Correct Password!");
                 input = ""; //Clear Password
                 btnClicked = 0;
+                
                 // we open the door
                 ani.SetBool("CorrectPassword", true);
+                
+                // we show the number
+                ObjectNum.SetActive(true);
             }
             else
             {
