@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb1664c8-d14d-42ae-b6c5-74614c77f039" name="Changes" comment="" />
+    <list default="true" id="bb1664c8-d14d-42ae-b6c5-74614c77f039" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CountObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CountObjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CountObjects.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/CountObjects.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keypad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/keypad.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +14,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CheckPassword.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DoorOpenAnimation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ObjectsToCollect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/keypad.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="23fVKipqgQWIdTeLoYmabDUmIEG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -34,7 +45,8 @@
       <workItem from="1642176947335" duration="1519000" />
       <workItem from="1642204790637" duration="3668000" />
       <workItem from="1642213610995" duration="691000" />
-      <workItem from="1642239833470" duration="12827000" />
+      <workItem from="1642239833470" duration="13232000" />
+      <workItem from="1653127522494" duration="6994000" />
     </task>
     <servers />
   </component>
