@@ -28,7 +28,6 @@ public class followPlayer : MonoBehaviour
         actualPos = this.transform.position;
         anim.SetBool("Walk_Anim", true);
         nav.SetDestination(targetCamera.position);
-        //this.transform.LookAt(targetCamera);
 
         // Determine which direction to rotate towards
         Vector3 targetDirection = target.position - transform.position;
